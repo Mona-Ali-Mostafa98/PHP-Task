@@ -13,6 +13,7 @@
 <body>
 <?php require "validation.php" ?>
 <h1>Add New User</h1>
+<div class="container">
    <form action="<?= $_SERVER['PHP_SELF']?> "method="post">
   <!-- 2 column grid layout with text inputs for the first and last names -->
       <div class="form-outline mb-4">
@@ -20,8 +21,7 @@
         <input type="text" id="full_name" name="full_name" class="form-control" />
         <span class="text-danger">* <?php echo $fullNameErr;?></span>
       </div>
-
-    
+      
   <!-- username input -->
   <div class="form-outline mb-4">
       <label class="form-label"  for="username">Username</label>
@@ -68,6 +68,7 @@
   <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
 
 </form>
+</div>
 <!-- insert part -->
 <?php
 if(isset($_POST['full_name'])&&isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['confirmPassword'])&&isset($_POST['email'])&&isset($_POST['birth_date'])&&isset($_POST['city'])){
